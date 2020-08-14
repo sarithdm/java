@@ -8,5 +8,7 @@ Download mysql connector from below link and save in the folder Tomcat 9.0\lib
 
 https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21.jar
 
+Use this [code](https://github.com/sarithdm/java/blob/master/Lab/database.jsp) to test database connectivity 
+
 
  
