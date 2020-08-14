@@ -1,4 +1,4 @@
-Install JDK 9: https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html
+Install JDK 8: https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html
 
 Install Tomcat 9.0.37:  https://tomcat.apache.org/download-70.cgi 
 
