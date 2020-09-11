@@ -10,4 +10,13 @@
 <url-pattern>/HelloWorld</url-pattern>
 </servlet-mapping>
 
+  <servlet>
+    <servlet-name>DBPhoneLookup</servlet-name>
+    <servlet-class>DBPhoneLookup</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DBPhoneLookup</servlet-name>
+    <url-pattern>/DBPhoneLookup</url-pattern>
+  </servlet-mapping>
+
 </web-app>
