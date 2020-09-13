@@ -2,7 +2,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-public class FirstServlet extends HttpServlet {
+public class CookieFirst extends HttpServlet {
 
   public void doPost(HttpServletRequest request, HttpServletResponse response){
     try{
@@ -16,7 +16,7 @@ public class FirstServlet extends HttpServlet {
 	    response.addCookie(ck);//adding cookie in the response
 
 	    //creating submit button
-	    out.print("<form action='SecondServlet' method='post'>");
+	    out.print("<form action='CookieSecond' method='post'>");
 	    out.print("<input type='submit' value='go'>");
 	    out.print("</form>");
 
