@@ -3,7 +3,7 @@
 <%-- All we're good for is throwing an exception --%>
 <%
 if (System.currentTimeMillis() > 0) {
-throw new Exception("oops");
+throw new Exception("This is an error message from error maker");
 }
 %>
 

@@ -7,6 +7,10 @@
 <H1>
 <%= exception.getClass().getName() %>
 </H1>
+<H2>
+</br>
+<%= exception.getMessage() %>
+</H2>
 We encountered an error while executing your page:
 
 <% String name = request.getServerName(); %>
