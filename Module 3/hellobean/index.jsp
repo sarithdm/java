@@ -6,6 +6,7 @@
 <BODY>
 <H1>
 Hello, <jsp:getProperty name="objhello" property="name" />
+<%-- name should match getName --%>
 </H1>
 </BODY>
 </HTML>
