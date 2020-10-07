@@ -1,13 +1,11 @@
 <%-- hello3.jsp --%>
 <%@ page import="com.it409.HelloBean" %>
-<jsp:useBean id="hello" class="com.it409.HelloBean">
-<jsp:setProperty name="hello" property="*" />
-</jsp:useBean>
+<jsp:useBean id="objhello" class="com.it409.HelloBean" />
 <HTML>
 <HEAD><TITLE>Hello</TITLE></HEAD>
 <BODY>
 <H1>
-Hello, <jsp:getProperty name="hello" property="name" />
+Hello, <jsp:getProperty name="objhello" property="name" />
 </H1>
 </BODY>
 </HTML>

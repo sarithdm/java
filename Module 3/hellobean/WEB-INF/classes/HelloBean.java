@@ -1,9 +1,7 @@
 package com.it409;
 public class HelloBean {
-private String name = "World";
-public void setName(String name) {
-this.name = name;
-}
+private String name = "Students";
+
 public String getName() {
 return name;
 }
