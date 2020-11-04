@@ -2,7 +2,7 @@
 
 javac Adder.java
 
-2. Compile Implementation of Remote Interface Adder.java
+2. Compile Implementation of Remote Interface AdderRemote.java
 
 javac AdderRemote.java
 
