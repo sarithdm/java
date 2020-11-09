@@ -1,0 +1,130 @@
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Book Store</title>
+	<style>
+	*{
+		box-sizing: border-box;
+	}	
+	body
+	{
+		background-image: url("Photo.jpg");
+		height: 100%;
+		background-position: center;
+ 	 	background-repeat: no-repeat;
+  		background-size: cover;
+	}
+	#topmid{
+		border:0px solid black;
+		color:powderblue;
+		text-align: center;
+		font-weight: bold;
+		margin-top: 0px;
+		padding-left: 10%;
+		font-style: oblique;
+		font-size:38px;
+	}
+	a:hover{
+		color:red;
+	}
+	a:link{
+		color: green;
+		text-decoration: none;
+	}
+	.tab{
+		border:1px black solid;
+		background-color: #FFE5CC;
+		margin-left: 48%;
+		width:450px;
+		color:green;
+		font-weight: bold;
+		font-style:normal;
+		text-align:center;
+		font-size: 22px;
+		margin-bottom:10px;
+		padding:10px;
+	}
+	.home{
+		border:1px black solid;
+		background-color: #ccffcc;
+		margin-left: 1%;
+		width:200px;
+		color:blue;
+		font-weight: bold;
+		font-style:italic;
+		text-align:center;
+		font-size: 25px;
+		margin-bottom:10px;
+		padding:10px;
+		float:left;
+		clear:both;
+	}
+	.yel{
+	color:yellow;
+	}
+	.red{
+		color:red;
+	}
+	.green{
+		color:green;
+	}
+	.hd{
+		font-size:25px;
+	}
+	.brown{
+		color:brown;
+	}
+	</style>
+</head>
+<body>
+	<div id="topmid">
+		<h1>Online Exam</h1>
+	</div>
+	
+	<form action="userans" method="post">
+	<div>
+	Q1:When doPost() method of servlet gets called?<br>
+	<input type="radio" id="q1a" name="q1" value="A">
+	<label for="q1a">A POST request results from an HTML form that specifically lists POST as the METHOD.</label><br>
+	<input type="radio" id="q1b" name="q1" value="B">
+	<label for="q1b">The service() method checks the HTTP request type as POST and calls doPost() method..</label><br>
+	<input type="radio" id="q1c" name="q1" value="C">
+	<label for="q1c">Both A and B</label><br>
+	
+	Q2:What is javax.servlet.Servlet?<br>
+	<input type="radio" id="q2a" name="q2" value="A">
+	<label for="q2a">Interface</label><br>
+	<input type="radio" id="q2b" name="q2" value="B">
+	<label for="q2b">Abstract Class</label><br>
+	<input type="radio" id="q2c" name="q2" value="C">
+	<label for="q2c">None Of These</label><br>
+	
+	Q3:Which of the following code is used to get names of the headers in servlet?<br>
+	<input type="radio" id="q3a" name="q3" value="A">
+	<label for="q3a">response.getHeaderNames()</label><br>
+	<input type="radio" id="q3b" name="q3" value="B">
+	<label for="q3b">request.getHeaderNames()</label><br>
+	<input type="radio" id="q3c" name="q3" value="C">
+	<label for="q3c">None Of These</label><br>
+	
+	Q4:Which of the following code retrieves any extra path information associated with the URL the client sent?<br>
+	<input type="radio" id="q4a" name="q4" value="A">
+	<label for="q4a">response.getPathInfo()</label><br>
+	<input type="radio" id="q4b" name="q4" value="B">
+	<label for="q4b">request.getPathInfo()</label><br>
+	<input type="radio" id="q4c" name="q4" value="C">
+	<label for="q4c">None Of These</label><br>
+	
+	Q5:Which of the following code returns the port number on which this request was received?<br>
+	<input type="radio" id="q5a" name="q5" value="A">
+	<label for="q5a">response.getServerPort()</label><br>
+	<input type="radio" id="q5b" name="q5" value="B">
+	<label for="q5b">request.getServerPort()</label><br>
+	<input type="radio" id="q5c" name="q5" value="C">
+	<label for="q5c">Header.getServerPort()</label><br>
+	
+	<input type="submit" value=" Submit ">
+	</form>
+	</div>
+</body>
+</html>
