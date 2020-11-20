@@ -17,7 +17,7 @@ public class ViewServlet extends HttpServlet{
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","Lm@200029");
 			stmt = con.createStatement();
 			PreparedStatement ps = con.prepareStatement("Select * from Book");
-			ResultSet rs = ps.executeQuery();
+			rs = ps.executeQuery();
 			RequestDispatcher rd = req.getRequestDispatcher("View.html");
 			rd.include(req, res);
 			out.println("<div class=\"tab\">Books Available In Our Store</div>");
