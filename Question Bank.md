@@ -21,7 +21,18 @@
 
 ![CORBA](/img/2.png)
 
-3. 
+3. What are Message Driven Beans?
+
+* The Message-Driven Bean (MDB) is a stateless component that is invoked by a container as a result of the arrival of a JMS message
+* A MDB acts as a message consumer, it receives messages from a JMS Topic and performs business logic based on the message contents
+* Message-Driven Bean Container Services
+    * MDB life cycle management
+    * Exception handling
+    * Threading and concurrency
+    * Message acknowledgment
+    * Security
+
+
 
 
 
