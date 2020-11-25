@@ -7,7 +7,7 @@
 * The client’s Remote interface can now invoke methods on the EJBObject in the container. This EJBObject then passes these method calls to the Session Bean
 * The session bean returns a resultset to the EJBObject, which in turn returns it to the client’s Remote interface.
 *
-![EJB Life Cycle](https://github.com/sarithdm/java/blob/master/img/1.png?v=4&s=200)
+![EJB Life Cycle](/img/1.png?v=4&s=200)
 
 2. With a neat sketch explain CORBA Architecture (10 Marks)
 
