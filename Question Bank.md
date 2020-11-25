@@ -6,8 +6,9 @@
 * The Home object gives the client’s Remote interface a reference to the EJBObject in the container.
 * The client’s Remote interface can now invoke methods on the EJBObject in the container. This EJBObject then passes these method calls to the Session Bean
 * The session bean returns a resultset to the EJBObject, which in turn returns it to the client’s Remote interface.
-
+*
 ![EJB Life Cycle](/img/1.png)
+*
 2. With a neat sketch explain CORBA Architecture (10 Marks)
 
 * CORBA relies on the protocol Internet InterORB Protocol (IIOP) for communications between objects. 
@@ -17,7 +18,9 @@
 * To request access to an objects method, a CORBA client acquires an object reference to a CORBA server object. 
 * Then the client makes method calls on the object reference as if the CORBA object were local to the client.
 * The ORB finds the CORBA object and prepares it to receive requests, to communicate requests to it, and then to communicate replies back to the client.
+*
 ![CORBA](/img/2.png)
+*
 
 
 
