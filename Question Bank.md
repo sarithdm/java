@@ -20,7 +20,8 @@
 * The ORB finds the CORBA object and prepares it to receive requests, to communicate requests to it, and then to communicate replies back to the client.
 *
 ![CORBA](/img/2.png)
-*
+
+3. 
 
 
 
