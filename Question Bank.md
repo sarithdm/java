@@ -1,4 +1,4 @@
-1.  With a neat sketch explain the processes involved in the life cycle of an EJB (10 Marks)
+1.  With a neat sketch explain the processes involved in the life cycle of an EJB (10 Marks) Dec 2019,Dec 2018
 * The client locates the bean’s home using the JNDI(Java Naming and Directory Interface) services in the application server.
 * The JNDI service returns a reference to the client’s Home interface.
 * The client uses its Home interface to call home.create(). In response to this call, the Home object creates an EJBObject. A new instance of the code in the bean class is also instantiated by the newInstance() method.
@@ -9,7 +9,7 @@
 *
 ![EJB Life Cycle](/img/1.png?v=4&s=200)
 
-2. With a neat sketch explain CORBA Architecture (10 Marks)
+2. With a neat sketch explain CORBA Architecture (10 Marks) Dec 2018, Dec 2019
 
 * CORBA relies on the protocol Internet InterORB Protocol (IIOP) for communications between objects. 
 * The center of the CORBA architecture lies in the Object Request Broker (ORB).
