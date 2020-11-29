@@ -1,4 +1,4 @@
-1.  With a neat sketch explain the processes involved in the life cycle of an EJB (10 Marks) Dec 2019,Dec 2018
+## 1.  With a neat sketch explain the processes involved in the life cycle of an EJB (10 Marks) Dec 2019,Dec 2018
 * The client locates the bean’s home using the JNDI(Java Naming and Directory Interface) services in the application server.
 * The JNDI service returns a reference to the client’s Home interface.
 * The client uses its Home interface to call home.create(). In response to this call, the Home object creates an EJBObject. A new instance of the code in the bean class is also instantiated by the newInstance() method.
@@ -9,7 +9,7 @@
 
 ![EJB Life Cycle](/img/1.png)
 
-2. With a neat sketch explain CORBA Architecture (10 Marks) Dec 2018, Dec 2019
+## 2. With a neat sketch explain CORBA Architecture (10 Marks) Dec 2018, Dec 2019
 
 * CORBA relies on the protocol Internet InterORB Protocol (IIOP) for communications between objects. 
 * The center of the CORBA architecture lies in the Object Request Broker (ORB).
@@ -21,7 +21,7 @@
 
 ![CORBA](/img/2.png)
 
-3. What are Message Driven Beans?
+## 3. What are Message Driven Beans?
 
 * The Message-Driven Bean (MDB) is a stateless component that is invoked by a container as a result of the arrival of a JMS message
 * A MDB acts as a message consumer, it receives messages from a JMS Topic and performs business logic based on the message contents
@@ -31,7 +31,7 @@
     * Threading and concurrency
     * Message acknowledgment
     * Security
-4. Illustrate the steps involved in the building of a session bean (10 Marks) Dec 2018
+## 4. Illustrate the steps involved in the building of a session bean (10 Marks) Dec 2018
 
 * Useful for maintain sessions
 * A session bean is an EJB that is created by a client and usually exists only for the duration of a single client-server session
@@ -59,7 +59,9 @@
 * Create Stub, Tie, and Object
 * Package and Deploy the Session Bean
 
-5. Illustrate the steps involved in the building of an entity bean (10 Marks) 
+Example: https://docs.oracle.com/cd/B14099_19/web.1012/b15505/session.htm
+
+## 5. Illustrate the steps involved in the building of an entity bean (10 Marks) 
 
 * An entity bean is an object representation of persistent data maintained in a permanent data store such as a database.
 * Entity beans represent specific data or collections of data, such as a row in a relational database.
@@ -72,7 +74,7 @@
    * The bean may utilize either JDBC or SQLJ 
    * In the case of container-managed persistence, the container provider may implement access to the database using standard APIs. 
    * The container provider can offer tools to map instance variables of an entity bean to calls to an underlying database. 
-
+> Steps
 
 * Set Up A Data Source to a Database
 * Develop a Primary Key Class
@@ -82,6 +84,8 @@
 * Define a Deployment Descriptor
 * Deploy Using Container-Provided Tools
 * Create a Client Application
+
+Example: https://docs.oracle.com/cd/A97335_02/apps.102/a83725/entity4.htm
 
 
 
