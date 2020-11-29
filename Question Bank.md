@@ -31,6 +31,59 @@
     * Threading and concurrency
     * Message acknowledgment
     * Security
+4. Illustrate the steps involved in the building of a session bean (10 Marks) Dec 2018
+
+* Useful for maintain sessions
+* A session bean is an EJB that is created by a client and usually exists only for the duration of a single client-server session
+* A session bean usually performs operations such as calculations or database access on behalf of the client
+* it is not recoverable if a system crash occurs.
+
+* Define state attribute
+   * Stateful / stateless / singleton
+* Define the Session Bean Class
+   * Public
+* Session Beans and Inheritance
+* Implement Session Bean Interface
+   * ejbActivate()
+   * ejbPassivate()
+   * ejbRemove()
+   * setSessionContext(SessionContext)
+      (Remote clients access a session bean via their remote and remote home interfaces (javax.ejb.EJBObject and javax.ejb.EJBHome, respectively))
+* Create Remote Interfaces
+   * All remote interfaces must extend the class javax.ejb.EJBObject
+* Create Home Interface
+* Create Session Bean Class Methods
+   * Session bean classes are used as the “molds” for instantiating session bean instances.
+   * These instances are indirectly called as local and remote clients via home and remote interfaces.
+* Create Business Methods
+* Create Stub, Tie, and Object
+* Package and Deploy the Session Bean
+
+5. Illustrate the steps involved in the building of an entity bean (10 Marks) 
+
+* An entity bean is an object representation of persistent data maintained in a permanent data store such as a database.
+* Entity beans represent specific data or collections of data, such as a row in a relational database.
+* An entity bean can be created in two ways:
+   * by direct action of the client in which a create method is called on the bean’s Home interface
+   * by some other action that adds data to the database that the bean type represents.
+ 
+* An entity bean can implement either bean-managed or container-managed persistence.
+   * In the case of bean-managed persistence, the implementer of an entity bean stores and retrieves the information managed by the bean through direct database calls. 
+   * The bean may utilize either JDBC or SQLJ 
+   * In the case of container-managed persistence, the container provider may implement access to the database using standard APIs. 
+   * The container provider can offer tools to map instance variables of an entity bean to calls to an underlying database. 
+
+
+* Set Up A Data Source to a Database
+* Develop a Primary Key Class
+* Develop the Entity Bean Class
+* Define the Home or Local Home Interface
+* Define the Local or Remote Interface
+* Define a Deployment Descriptor
+* Deploy Using Container-Provided Tools
+* Create a Client Application
+
+
 
 
 
