@@ -87,6 +87,70 @@ Example: https://docs.oracle.com/cd/B14099_19/web.1012/b15505/session.htm
 
 Example: https://docs.oracle.com/cd/A97335_02/apps.102/a83725/entity4.htm
 
+## 6. Compare Java Messaging Services with Java Database Connectivity (5 Marks) Dec 2019
+* JMS is a vendor-independent API used to access messaging systems. 
+* It provides a common way for Java programmers to create, send, receive, and read an enterprise messaging system’s messages
+* JMS provides vendor-independent access to messaging services.
+* JMS allows messages to be sent from one JMS client to another via a messaging service called a message broker or a router.
+
+* It is similar to Java Database Connectivity (JDBC), an API used to access different relational databases. 
+* The Java Database Connectivity (JDBC) API provides universal data access from the Java programming language. 
+* Using the JDBC API, you can access virtually any data source, from relational databases to spreadsheets and flat files. 
+* JDBC technology also provides a common base on which tools and alternate interfaces can be built.
+
+
+## 7. Compare two message models in JMS (5 Marks) 
+
+* The Point-to-Point model sends messages to a receiver on a one-to-one basis.
+   * Instant messaging
+   * Receiving a transaction from another system
+   * Sending an order to another system
+   * Supply-chain processing
+ * The Publish/Subscribe model allows an application to publish messages on either a one-to-many or a many-to-many basis.
+   * Sending news stories to interested parties
+   * Sending sales forecasts to various people in an organization
+   * Sending stock prices to traders on the trading floor
+
+
+## 8. Compare Message-Driven Beans (MDBs) and Session Beans (5 marks)
+* Message bean has neither a Remote nor a Home interface.
+* This is because the message bean is not an RPC component
+* MDBs do not have business methods that are synchronously invoked by EJB clients
+* In addition to MDBs being similar to stateless session beans because both beans maintain no state between requests
+* MDBs can consume messages from any topic provided by a JMS-compliant vendor.
+* Messages consumed by MDBs may have come from other beans such as session, entity or message beans, non-EJB Java applications or non-Java applications that use a JMS compliant vendor.
+
+* Session beans is useful for maintain sessions
+* A session bean is an EJB that is created by a client and usually exists only for the duration of a single client-server session
+* A session bean usually performs operations such as calculations or database access on behalf of the client
+* it is not recoverable if a system crash occurs.
+
+## 9. Compare Message-Driven Beans (MDBs) and Entity Beans (5 marks)
+* Message bean has neither a Remote nor a Home interface.
+* This is because the message bean is not an RPC component
+* MDBs do not have business methods that are synchronously invoked by EJB clients
+* In addition to MDBs being similar to stateless session beans because both beans maintain no state between requests
+* MDBs can consume messages from any topic provided by a JMS-compliant vendor.
+* Messages consumed by MDBs may have come from other beans such as session, entity or message beans, non-EJB Java applications or non-Java applications that use a JMS compliant vendor.
+
+* An entity bean is an object representation of persistent data maintained in a permanent data store such as a database.
+* Entity beans represent specific data or collections of data, such as a row in a relational database.
+* An entity bean can be created in two ways:
+   * by direct action of the client in which a create method is called on the bean’s Home interface
+   * by some other action that adds data to the database that the bean type represents.
+
+## 10. Explain any two distributed programming services (8 marks)
+
+* Naming and Registration : For each class installed in a container, the container automatically registers an EJBHome interface in a directory using the Java Naming and Directory Interface (JNDI) API. 
+* Using JNDI, any client can locate the EJBHome interface to create a new bean instance or to find an existing entity bean instance.
+* Remote Method Invocation (RMI): RMI is a high-level programming interface that makes the location of the server transparent to the client. 
+* The RMI compiler creates a stub object for each Remote interface. The stub object is either installed on the client system or it can be downloaded at runtime, providing a local proxy object for the client. 
+* The stub implements all the Remote interfaces and transparently delegates all method calls across the network to the remote object.
+
+
+
+
+
 
 
 
