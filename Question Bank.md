@@ -176,7 +176,7 @@ Example: https://docs.oracle.com/cd/A97335_02/apps.102/a83725/entity4.htm
 * When using bean-managed persistence (BMP), it is the bean that is responsible for storing and retrieving its persisted data.
 * In BMP mode, the EJB must implement persistence. To do this, methods such as ejbStore and ejbLoad must be created and used, and communication with SQL databases must be implemented manually using JDBC.
 
-## 14. List out the benefits of Enterprise Java Beans (6 mqrks) Dec 2018
+## 14. List out the benefits of Enterprise Java Beans (6 marks) Dec 2018
 
 * Reusable application components :
    * component reuse and outsourcing,
