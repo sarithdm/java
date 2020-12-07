@@ -210,8 +210,10 @@ Example: https://docs.oracle.com/cd/A97335_02/apps.102/a83725/entity4.htm
 * That work can be performed within a single method invocation, or it may span across multiple method invocations.
 * If the work spans multiple methods, the object must maintain the user’s object state between method calls. 
 * The state management options for session beans are defined in the StateManagementType attribute in the DeploymentDescriptor object.
+
 * Stateless beans are intended to perform individual operations automatically and don’t maintain state across method invocations.
 * They’re also amorphous, in that any client can use any instance of a stateless bean at any time at the container’s discretion.
+
 * Stateful session beans maintain state both within and between transactions. 
 * Each stateful session bean is associated with a specific client. 
 * Containers are able to save and retrieve a bean’s state automatically while managing instance pools of stateful session beans.
@@ -232,6 +234,7 @@ Example: https://docs.oracle.com/cd/A97335_02/apps.102/a83725/entity4.htm
 * EJBObject Interface:
    * The EJBObject interface provides access to the business methods within the EJB.
 
+##18 
 
 
 
