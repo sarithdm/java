@@ -234,7 +234,62 @@ Example: https://docs.oracle.com/cd/A97335_02/apps.102/a83725/entity4.htm
 * EJBObject Interface:
    * The EJBObject interface provides access to the business methods within the EJB.
 
-##18 
+## 18. Explain the services provided by the EJB Container (7 marks) Dec 2018
+* A container is an entity that provides life cycle management, security, deployment, and runtime services to components. 
+* Each container type (including EJB, Web, JSP, Servlet, Applet, and Application Client) provides component-specific services as well.
+* Services provided by the EJB Container are:
+1. Bean life cycle management and instance pooling : 
+   * These services include creation, activation, passivity, and destruction.
+2. State management : 
+   * Individual EJBs do not need to explicitly save or restore the conversational object state between method calls.
+3. Bean transaction management : 
+   * The EJB container can automatically manage the start, the enrollment, the commitment, and the rollback of transactions on behalf of the EJB.
+4. Security constraint enforcement
+   * The EJB container automatically performs all security checking on behalf of the EJB.
+5. Distributed remote access:
+   * Uses Remote Method Invocation (RMI)
+   * Internet InterORB Protocol (IIOP).
+6. Container-managed persistence (CMP)
+* EJBs do not need to explicitly retrieve or store persistent object data from a database. 
+* The EJB container can automatically manage persistent data on behalf of the EJB.
+7. Generated remote stubs
+* The container will create remote stubs for wrappers such as RMI and CORBA
+
+## 19. Explain the services provided by the EJB Container. List the additional functionalities of EJB Container (10 marks) 
+* A container is an entity that provides life cycle management, security, deployment, and runtime services to components. 
+* Each container type (including EJB, Web, JSP, Servlet, Applet, and Application Client) provides component-specific services as well.
+* Services provided by the EJB Container are:
+1. Bean life cycle management and instance pooling : 
+   * These services include creation, activation, passivity, and destruction.
+2. State management : 
+   * Individual EJBs do not need to explicitly save or restore the conversational object state between method calls.
+3. Bean transaction management : 
+   * The EJB container can automatically manage the start, the enrollment, the commitment, and the rollback of transactions on behalf of the EJB.
+4. Security constraint enforcement
+   * The EJB container automatically performs all security checking on behalf of the EJB.
+5. Distributed remote access:
+   * Uses Remote Method Invocation (RMI)
+   * Internet InterORB Protocol (IIOP).
+6. Container-managed persistence (CMP)
+   * EJBs do not need to explicitly retrieve or store persistent object data from a database. 
+   * The EJB container can automatically manage persistent data on behalf of the EJB.
+7. Generated remote stubs
+   * The container will create remote stubs for wrappers such as RMI and CORBA
+* Additional functionalities of EJB Container are:
+1. provides an environment that supports the execution of applications developed using EJB architecture, 
+2. managing and coordinating allocation of resources to the applications.
+3. responsible for registering the object
+4. providing a Remote interface for the object
+5. creating and destroying object instances
+6. checking security for the object
+7. managing the active state for the object
+8. coordinating distributed transactions.
+
+
+
+
+
+
 
 
 
