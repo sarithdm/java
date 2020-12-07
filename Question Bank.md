@@ -250,10 +250,10 @@ Example: https://docs.oracle.com/cd/A97335_02/apps.102/a83725/entity4.htm
    * Uses Remote Method Invocation (RMI)
    * Internet InterORB Protocol (IIOP).
 6. Container-managed persistence (CMP)
-* EJBs do not need to explicitly retrieve or store persistent object data from a database. 
-* The EJB container can automatically manage persistent data on behalf of the EJB.
+   * EJBs do not need to explicitly retrieve or store persistent object data from a database. 
+   * The EJB container can automatically manage persistent data on behalf of the EJB.
 7. Generated remote stubs
-* The container will create remote stubs for wrappers such as RMI and CORBA
+   * The container will create remote stubs for wrappers such as RMI and CORBA
 
 ## 19. Explain the services provided by the EJB Container. List the additional functionalities of EJB Container (10 marks) 
 * A container is an entity that provides life cycle management, security, deployment, and runtime services to components. 
