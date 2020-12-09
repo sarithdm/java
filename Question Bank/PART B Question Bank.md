@@ -1,7 +1,8 @@
 ## 1.  Write a JSP code to implement hit counter for the session
+######  hitcount.jsp
         <HTML>
         <HEAD>
-        hitcount.jsp
+       
         </HEAD>
         <BODY>
         <%@ page language="java" %>
@@ -21,8 +22,8 @@
 
         </BODY>
         </HTML>
-        
-        Counter.java        
+       
+###### Counter.java        
         package com.it409;
         import java.io.Serializable;
 
