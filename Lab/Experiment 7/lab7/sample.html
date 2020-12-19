@@ -1,0 +1,180 @@
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Library</title>
+	<style>
+	*{
+		box-sizing: border-box;
+	}	
+	body
+	{
+		background-image: url("Photo.jpg");
+		height: 100%;
+		background-position: center;
+ 	 	background-repeat: no-repeat;
+  		background-size: cover;
+	}
+	#topmid{
+		border:0px solid black;
+		color:powderblue;
+		text-align: center;
+		font-weight: bold;
+		margin-top: 0px;
+		padding-left: 10%;
+		font-style: oblique;
+		font-size:38px;
+	}
+	a:hover{
+		color:red;
+	}
+	a:link{
+		color: green;
+		text-decoration: none;
+	}
+	.tab{
+		border:1px black solid;
+		background-color: #FFE5CC;
+		margin-left: 48%;
+		width:450px;
+		color:green;
+		font-weight: bold;
+		font-style:normal;
+		text-align:center;
+		font-size: 22px;
+		margin-bottom:10px;
+		padding:10px;
+	}
+	.home{
+		border:1px black solid;
+		background-color: #ccffcc;
+		margin-left: 1%;
+		width:200px;
+		color:blue;
+		font-weight: bold;
+		font-style:italic;
+		text-align:center;
+		font-size: 25px;
+		margin-bottom:10px;
+		padding:10px;
+		float:left;
+		clear:both;
+	}
+	.yel{
+	color:yellow;
+	}
+	.red{
+		color:red;
+	}
+	.green{
+		color:green;
+	}
+	.hd{
+		font-size:25px;
+	}
+	.brown{
+		color:brown;
+	}
+	</style>
+</head>
+<body>
+<div class="top">Welcome to Library</div>
+	 <div class="home">
+        <a href="userview">View Available Books</a>
+    </div>
+	<div class="loginbox">
+		<center>
+		<h1>Reserve Books</h1>
+		</center>
+
+		<form action="userbook" method="post">
+			<div>
+				<tr>
+				<td>Title</td><br>
+				<td><select name="source">
+				<option value="-1" selected>select..</option>
+				<option value="The Great Gatsby">The Great Gatsby</option>
+				<option value="Pride and Prejudice">Pride and Prejudice</option>
+				<option value="The Catcher in the Rye">The Catcher in the Rye</option>
+				<option value="Franny and Zooey">Franny and Zooey</option>
+				</select></td>
+				</tr>
+				<br><br>
+
+				<tr>
+				<td>Booking Date: </td><br>
+				<td><select name="month">
+				<option value="-1" selected>select..</option>
+				<option value="January">January</option>
+				<option value="February">February</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+				</select></td>
+				<td><select name="date">
+				<option value="-1">select..</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option value="31">31</option>
+				</tr>
+				<br><br>
+				</select>
+				<br><br>
+
+				<tr>
+				<td>Number of Copies required?</td><br>
+				<td><input type="text" name="count" id="count" size="30"></td>
+				</tr>
+				<br><br>
+
+
+				<tr>
+				<td><input type="reset"></td>
+				<input type="submit" name="Book" value="Book"/><br>
+			</form>
+			<form action="login.html" method="POST">
+				<input type="submit" name="logout" value="Log Out"/><br></a>
+				</tr>
+			</div>
+		</form>
+	</td>
+</tr>
+</div>
+</form>
+</div>
+</body>
+</html>
