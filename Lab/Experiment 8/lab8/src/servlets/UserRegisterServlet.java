@@ -58,4 +58,5 @@ public class UserRegisterServlet extends HttpServlet {
 catch (SQLException ignored) { }
 }
 }
-}
+} 
+ 

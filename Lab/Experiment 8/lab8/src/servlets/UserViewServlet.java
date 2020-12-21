@@ -45,7 +45,7 @@ public class UserViewServlet extends HttpServlet{
 			}
 			out.println("</table>\r\n" + 
 					"	</div>");
-			
+
 		}
 		catch(ClassNotFoundException e) {
 		out.println("Couldn't load database driver: " + e.getMessage());
@@ -61,4 +61,5 @@ public class UserViewServlet extends HttpServlet{
 catch (SQLException ignored) { }
 }
 }
-}
+} 
+ 
