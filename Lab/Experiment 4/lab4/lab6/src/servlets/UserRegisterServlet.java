@@ -15,15 +15,15 @@ public class UserRegisterServlet extends HttpServlet {
 		PrintWriter out = res.getWriter();
 
 		String username = req.getParameter("username");
-		String password = req.getParameter("password");
-		String firstname = req.getParameter("firstname");
+		String firstname= req.getParameter("firstname");
 		String lastname = req.getParameter("lastname");
-		String address = req.getParameter("address");
-		String idproof = req.getParameter("idproof");
-		String age = req.getParameter("age");
-		String gender = req.getParameter("gender");
+		String e-mail   = req.getParameter("e-mail");
+		String password = req.getParameter("password");
+		String address  = req.getParameter("address");
+		String aadhar no= req.getParameter("aadhar");
+		String age      = req.getParameter("age");
+		String gender   = req.getParameter("gender");
 		String phone = req.getParameter("phone");
-		String mailid = req.getParameter("mailid");
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","root");
@@ -31,15 +31,15 @@ public class UserRegisterServlet extends HttpServlet {
 			PreparedStatement ps = con
 					.prepareStatement("insert into User values(?,?,?,?,?,?,?)");
 			ps.setString(1, username);
-			ps.setString(2, password);
-			ps.setString(3, firstname);
-			ps.setString(4, lastname);
-			ps.setString(5, address);
-			ps.setString(6, idproof);
-			ps.setString(7, age);
-			ps.setString(8, gender);
-			ps.setString(9, phone);
-			ps.setString(10, mailid);
+			ps.setString(2, firstname);
+			ps.setString(3, lastname);
+			ps.setString(4, e-mail);
+			ps.setString(5, password);
+			ps.setString(6, address);
+			ps.setString(7, aadhar no);
+			ps.setString(8, age);
+			ps.setString(9, gender);
+			ps.setString(10, phone);
 			//ps.setInt(10, 2);
 			int k = ps.executeUpdate();
 			if (k == 1) {
