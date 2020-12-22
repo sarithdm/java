@@ -1,14 +1,14 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Job Portal</title>
+	<title>ONLINE TICKET STORE</title>
 	<style>
 	*{
 		box-sizing: border-box;
 	}	
 	body
 	{
-		background-image: url("Photo.jpg");
+		background-image: url("Photos.jpeg");
 		height: 100%;
 		background-position: center;
  	 	background-repeat: no-repeat;
@@ -34,7 +34,7 @@
 	.tab{
 		border:1px black solid;
 		background-color: #FFE5CC;
-		margin-left: 48%;
+		margin-left: 38%;
 		width:450px;
 		color:green;
 		font-weight: bold;
@@ -44,6 +44,7 @@
 		margin-bottom:10px;
 		padding:10px;
 	}
+	
 	.home{
 		border:1px black solid;
 		background-color: #ccffcc;
@@ -74,36 +75,53 @@
 	.brown{
 		color:brown;
 	}
+	.blue{
+		color:blue;
+	}
 	</style>
 </head>
+
 <body>
 	<div id="topmid">
-		<h1>Welcome to Online Job Portal</h1>
+		<h1>Welcome to Online Ticket Store</h1>
+	</div>
+	<div class="home">
+		<a href="home.html">Home</a>
 	</div>
 
 	<div class="home">
-		<a href="register.html">Register</a>
+		<a href="login.html">Login</a>
 	</div>
-
-	<table class="tab hd brown">
+	
+	<table class="tab brown hd">
 		<tr>
-			<td>USER LOGIN</td>
+			<td>Register Here</td>
 		</tr>
 	</table>
 
-	<table class="tab" border="0px" cellpadding="10" cellspacing="10">
-
+	<table class="tab" border="0px">
+		
 		<tr>
 			<td>
-				<form action="userlog" method="post">
-					Username: <input type="text" name="username" required><br/><br/>
-					Password: <input type="password" name="password" required><br/><br/>
-					<input type="submit" value=" LOGIN ">
+				<form action="userreg" method="post">
+					Username : <input type="text"	 name="username" required><br>
+					FirstName: <input type="text"	 name="firstname" required><br>
+					Last Name: <input type="text"	 name="lastname" required><br>
+					e-mail   : <input type="text"	 name="e-mail" required><br>
+					Password : <input type="password"name="password" required><br>
+					Address  : <input type="text"    name="address" required><br>
+					aadhar no: <input type="text"    name="aadhar no" required><br>
+					age      : <input type="text"    name="age" required><br>
+					gender   : <input type="text"    name="gender" required><br>
+					Mobile No: <input type="text"    name="Mobile no" required><br>
+					<input type="submit" value=" Register ">
 				</form>
 			</td>
-
+			
 		</tr>  
 	</table>
+	
+
+
 </body>
-</html> 
- 
+</html>

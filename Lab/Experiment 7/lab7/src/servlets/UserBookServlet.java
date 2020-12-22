@@ -51,7 +51,7 @@ Class.forName("com.mysql.jdbc.Driver");
 				rd.include(req, res);
 				out.println("<h3 class='error'>Sorry for interruption! Try for another Book</h3>");
 			}
-	
+
 		}
 		 catch(ClassNotFoundException e) {
 		out.println("Couldn't load database driver: " + e.getMessage());
@@ -67,4 +67,4 @@ Class.forName("com.mysql.jdbc.Driver");
 catch (SQLException ignored) { }
 }
 }
-}
+} 

@@ -1,21 +1,21 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Library</title>
+	<title>Online Bus Ticket Reservation</title>
 	<style>
 	*{
 		box-sizing: border-box;
 	}	
 	body
 	{
-		background-image: url("Photo.jpg");
+		background-image: url("Photos.jpeg");
 		height: 100%;
 		background-position: center;
  	 	background-repeat: no-repeat;
   		background-size: cover;
 	}
 	#topmid{
-		border:0px solid black;
+		border:0px dark red;
 		color:powderblue;
 		text-align: center;
 		font-weight: bold;
@@ -32,9 +32,9 @@
 		text-decoration: none;
 	}
 	.tab{
-		border:1px black solid;
+		border:1px dark red;
 		background-color: #FFE5CC;
-		margin-left: 48%;
+		margin-left: 38%;
 		width:450px;
 		color:green;
 		font-weight: bold;
@@ -45,7 +45,7 @@
 		padding:10px;
 	}
 	.home{
-		border:1px black solid;
+		border:1px dark red;
 		background-color: #ccffcc;
 		margin-left: 1%;
 		width:200px;
@@ -76,32 +76,48 @@
 	}
 	</style>
 </head>
-<body>
-<div class="top">Welcome to Library</div>
+
+<body >
+	<div class="top">Welcome to bus ticket reservation </div>
 	 <div class="home">
-        <a href="userview">View Available Books</a>
+        <a href="view">View your tickets</a>
     </div>
 	<div class="loginbox">
+	<img src="avatar2.jpg" class="avatar">
 		<center>
-		<h1>Reserve Books</h1>
+		<h1>Ticket BOOKING</h1>
 		</center>
 
-		<form action="userbook" method="post">
+		<form action="home" method="post">
 			<div>
 				<tr>
-				<td>Title</td><br>
+				<td>source</td><br>
 				<td><select name="source">
 				<option value="-1" selected>select..</option>
-				<option value="The Great Gatsby">The Great Gatsby</option>
-				<option value="Pride and Prejudice">Pride and Prejudice</option>
-				<option value="The Catcher in the Rye">The Catcher in the Rye</option>
-				<option value="Franny and Zooey">Franny and Zooey</option>
+				<option value="Kerala">KERALA</option>
+				<option value="Mumbai">MUMBAI</option>
+				<option value="Goa">GOA</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Bangaluru">Bengaluru</option>
 				</select></td>
 				</tr>
 				<br><br>
 
 				<tr>
-				<td>Booking Date: </td><br>
+				<td>destination</td><br>
+				<td><select name="destination">
+				<option value="-1" selected>select..</option>
+				<option value="Kerala">KERALA</option>
+				<option value="Mumbai">MUMBAI</option>
+				<option value="Goa">GOA</option>
+				<option value="Delhi">Delhi</option>
+				<option value="Bangaluru">Bengaluru</option>
+				</select></td>
+				</tr>
+				<br><br>
+
+				<tr>
+				<td>Journey Date: </td><br>
 				<td><select name="month">
 				<option value="-1" selected>select..</option>
 				<option value="January">January</option>
@@ -156,7 +172,7 @@
 				<br><br>
 
 				<tr>
-				<td>Number of Copies required?</td><br>
+				<td>Number of seats required?</td><br>
 				<td><input type="text" name="count" id="count" size="30"></td>
 				</tr>
 				<br><br>

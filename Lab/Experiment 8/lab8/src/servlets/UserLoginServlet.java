@@ -26,7 +26,7 @@ try {
 
 	// Execute an SQL query, get a ResultSet
 	rs = stmt.executeQuery("SELECT * FROM User where username='"+username+"' and password ='"+password+"'");
-			
+
 	if (rs.next()) {
 		RequestDispatcher rd = req.getRequestDispatcher("sample.html");
 		rd.forward(req, res);
@@ -54,4 +54,5 @@ if (con != null) con.close();
 catch (SQLException ignored) { }
 }
 		}
-	}
+	} 
+ 

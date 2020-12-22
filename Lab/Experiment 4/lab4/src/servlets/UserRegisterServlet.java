@@ -19,6 +19,9 @@ public class UserRegisterServlet extends HttpServlet {
 		String firstname = req.getParameter("firstname");
 		String lastname = req.getParameter("lastname");
 		String address = req.getParameter("address");
+		String idproof = req.getParameter("idproof");
+		String age = req.getParameter("age");
+		String gender = req.getParameter("gender");
 		String phone = req.getParameter("phone");
 		String mailid = req.getParameter("mailid");
 		try {
@@ -32,9 +35,12 @@ public class UserRegisterServlet extends HttpServlet {
 			ps.setString(3, firstname);
 			ps.setString(4, lastname);
 			ps.setString(5, address);
-			ps.setString(6, phone);
-			ps.setString(7, mailid);
-			//ps.setInt(8, 2);
+			ps.setString(6, idproof);
+			ps.setString(7, age);
+			ps.setString(8, gender);
+			ps.setString(9, phone);
+			ps.setString(10, mailid);
+			//ps.setInt(10, 2);
 			int k = ps.executeUpdate();
 			if (k == 1) {
 				RequestDispatcher rd = req.getRequestDispatcher("sample.html");
