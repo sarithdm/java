@@ -210,8 +210,8 @@ Examples
         <%! code %> 
 Examples 
 
-      – <%! private int someField = 5; %> 
-      – <%! private void someMethod(...) {...} %> 
+      <%! private int someField = 5; %> 
+      <%! private void someMethod(...) {...} %> 
 
 
 
