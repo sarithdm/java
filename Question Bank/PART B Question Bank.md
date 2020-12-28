@@ -151,6 +151,68 @@
 * Exception - The Exception object allows the exception data to be accessed by designated JSP.
 
 
+## 6. Create JSP pages for collecting payment details in an online shopping application (5 marks)
+                
+userinput.jsp
+
+        <html>
+        <head>	
+        <title>User Input JSP File </title>
+        </head>
+        <body>
+        <form action="infovalidate.jsp">
+        Card Number: <input type ="text" name="cnum">
+        <br/>
+        CVV: <input type="text" name="cvv">
+        <br/>
+        <input type ="submit" value ="submit">
+        </form>
+
+        <%
+        out.println("Message - " + request.getParameter("msg"));
+        out.println("<br/>");
+
+        %>
+
+        </body>
+        </html>
+        
+infovalidate.jsp
+ 
+        <html>
+        <head>	
+        <title>Information Validation JSP File</title>
+        </head>
+        <body>
+        <jsp:forward page = "userinput.jsp"> 
+        <jsp:param name = "msg" value = "invalid credit card number"/> 
+        </jsp:forward> 
+
+        </body>
+        </html>
+
+## 7. 	Explain JSP scripting elements with an example	(5 marks)
+
+* Expressions: 
+
+        <%= expression %> 
+Evaluated and inserted into the servlet’s output. i.e., results in something like out.println(expression) 
+Examples 
+
+        Current time: <%= new java.util.Date() %> 
+        Your hostname: <%= request.getRemoteHost() %> 
+
+* Scriptlets: 
+
+        <% java code %> 
+* Declarations: 
+
+        <%! code %> 
+Examples 
+
+      – <%! private int someField = 5; %> 
+      – <%! private void someMethod(...) {...} %> 
+
 
 
 
