@@ -3,7 +3,9 @@
 * A JSP directive allows a JSP page to control certain aspects of its workhorse servlet. Directives can be used to have the workhorse servlet set its content type, import a package, control its output buffering and session management, extend a different superclass, and give special handling to errors.
 * A directive can even specify the use of a non-Java scripting language
 * The directive syntax requires a directive name along with an attribute name/value pair, all surrounded by <%@ %> tags.
-* <%@ directiveName attribName="attribValue" %>
+    
+		<%@ directiveName attribName="attribValue" %>
+    
 *	Page directives —These directives communicate page-specific information, such as buffer and thread information or error handling.
 *	The include directive — This directive can be used to include an external document in the page
 *	A taglib directive—This indicates a library of custom tags that the page can invoke.
