@@ -113,23 +113,24 @@ need to be able to pass control from one page to another
 ## 5. Create a java bean ‘Student’ having attributes name, rollno, age, marks. Write a JSP page    processForm.jsp to display submitted details of students through a form.
 	<form method="POST" action="processForm.jsp">
 	Name:    <input name="name"/> </br>
-	 Username:   <input name="username"/></br>
-	Job:   <input name="jobTitle"/></br>
-	   City: <input name="city"/></br>
+
+	Roll Number:   <input rollno="rollno"/></br>
+	   Age: <input name="age"/></br>
+	   Marks: <input name="marks"/></br>
 	<input type="submit">
 
-	<%@ page import = "com.it409.Employee"%>
-	<jsp:useBean id="employee" class="com.it409.Employee">
-	    <jsp:setProperty name="employee" property="*"/>
+	<%@ page import = "com.it409.Student"%>
+	<jsp:useBean id="student" class="com.it409.Student">
+	    <jsp:setProperty name="student" property="*"/>
 	</jsp:useBean>
 	<HTML>
 	<HEAD><TITLE>Hello</TITLE></HEAD>
 	<BODY>
 	<H1>
-	Name:<jsp:getProperty name="employee" property="name" /> </br>
-	Username: <jsp:getProperty name="employee" property="username" /></br>
-	Job: <jsp:getProperty name="employee" property="jobTitle" /></br>
-	City: <jsp:getProperty name="employee" property="city" /></br>
+	Name:<jsp:getProperty name="student" property="name" /> </br>
+	Username: <jsp:getProperty name="student" property="rollno" /></br>
+	Job: <jsp:getProperty name="student" property="age" /></br>
+	City: <jsp:getProperty name="student" property="marks" /></br>
 	<%-- name should match getName --%>
 	</H1>
 	</BODY>
