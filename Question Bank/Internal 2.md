@@ -10,36 +10,36 @@
 
 ## 2. Write a JSP program to demonstrate the use of page directive
 
-<%-- errorTaker.jsp --%>
-<%@ page isErrorPage="true" %>
-<% response.setStatus(500); %><HTML>
-<HTML>
-<HEAD><TITLE>Error: <%= exception.getClass().getName() %></TITLE></HEAD>
-<BODY>
-<H1>
-<%= exception.getClass().getName() %>
-</H1>
-<H2>
-</br>
-<%= exception.getMessage() %>
-</H2>
-We encountered an error while executing your page:
+	<%-- errorTaker.jsp --%>
+	<%@ page isErrorPage="true" %>
+	<% response.setStatus(500); %><HTML>
+	<HTML>
+	<HEAD><TITLE>Error: <%= exception.getClass().getName() %></TITLE></HEAD>
+	<BODY>
+	<H1>
+	<%= exception.getClass().getName() %>
+	</H1>
+	<H2>
+	</br>
+	<%= exception.getMessage() %>
+	</H2>
+	We encountered an error while executing your page:
 
-<% String name = request.getServerName(); %>
-Please contact <A HREF="mailto:webmaster@<%= name %>">webmaster@<%= name %></A>
-to report the problem.
-</BODY>
-</HTML>
+	<% String name = request.getServerName(); %>
+	Please contact <A HREF="mailto:webmaster@<%= name %>">webmaster@<%= name %></A>
+	to report the problem.
+	</BODY>
+	</HTML>
 
-<%-- errorMaker.jsp --%>
-<%@ page session="false" %> <%-- Don't send needless cookies --%>
-<%@ page errorPage="/errorTaker.jsp" %> <%-- General error handling page --%>
-<%-- All we're good for is throwing an exception --%>
-<%
-if (System.currentTimeMillis() > 0) {
-throw new Exception("This is an error message from error maker");
-}
-%>
+	<%-- errorMaker.jsp --%>
+	<%@ page session="false" %> <%-- Don't send needless cookies --%>
+	<%@ page errorPage="/errorTaker.jsp" %> <%-- General error handling page --%>
+	<%-- All we're good for is throwing an exception --%>
+	<%
+	if (System.currentTimeMillis() > 0) {
+	throw new Exception("This is an error message from error maker");
+	}
+	%>
 
 ## 3.Compare any two application models in JSP with the help of a diagram	
 
@@ -53,7 +53,7 @@ throw new Exception("This is an error message from error maker");
 * Model: JavaBeans or EJB—business logic.
 * View: JSP—used to compose the user interface.
 * Controller: Servlet—used to process the HTTP request and manage the application’s workflow.
- 
+
 ## 4. How to pass control from one JSP page to another. Explain with the help of an example
 
 Separating presentation pages from request processing/business logic 
