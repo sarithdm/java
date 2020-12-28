@@ -56,12 +56,11 @@
 
 ## 4. How to pass control from one JSP page to another. Explain with the help of an example
 
-Separating presentation pages from request processing/business logic 
-more than one page used to process client request 
+* Separating presentation pages from request processing/business logic more than one page used to process client request 
 need to be able to pass control from one page to another 
-e.g. in the example, infovalidate.jsp need to be able to forward to either userinput.jsp or confirmed.jsp depending on validation result 
-Can use the <jsp:forward> standard action tag 
-A validation page (infovalidate.jsp) forward control to a page, userinput.jsp, in order to display an error message. Need to include error message in the forwarding instruction.
+* e.g. in the example, infovalidate.jsp need to be able to forward to either userinput.jsp or confirmed.jsp depending on validation result 
+* Can use the <jsp:forward> standard action tag 
+* A validation page (infovalidate.jsp) forward control to a page, userinput.jsp, in order to display an error message. Need to include error message in the forwarding instruction.
 	<html>
 	<head>	
 	<title>User Input JSP File</title>
@@ -135,14 +134,14 @@ A validation page (infovalidate.jsp) forward control to a page, userinput.jsp, i
 	</HTML>
 
 ## 6. Explain session sharing between JSP page with an example	
-There are a number of different techniques available to web applications to enable session tracking, including cookies 
-In JSP, it can be done by simply using the ‘scope’ attribute of whatever needs to be tracked. 
-Set the ‘scope’ to session, and the relevant attribute will be available throughout the session of the client
-Example: a JSP page that displays two counters – a hit counter for the session, and a hit counter for the application
-	package com.it409;
-	import java.io.Serializable;
+* There are a number of different techniques available to web applications to enable session tracking, including cookies 
+* In JSP, it can be done by simply using the ‘scope’ attribute of whatever needs to be tracked. 
+* Set the ‘scope’ to session, and the relevant attribute will be available throughout the session of the client
+* Example: a JSP page that displays two counters – a hit counter for the session, and a hit counter for the application
 
-	public class Counter implements Serializable{
+		package com.it409
+		import java.io.Serializable;
+		public class Counter implements Serializable{
 
 	  // Initialize the bean on creation
 	  int count = 0;
@@ -166,33 +165,33 @@ Example: a JSP page that displays two counters – a hit counter for the session
 
 	    this.count = count;
 	  }
-	}
+		}
 
-	<HTML>
-	<HEAD>
-	</HEAD>
-	<BODY>
-	<%@ page language="java" %>
+		<HTML>
+		<HEAD>
+		</HEAD>
+		<BODY>
+		<%@ page language="java" %>
 
-	<jsp:useBean id="counter" scope="session" class="com.it409.Counter" />
+		<jsp:useBean id="counter" scope="session" class="com.it409.Counter" />
 
-	<jsp:setProperty name="counter" property="count" param="count" />
-	<%
+		<jsp:setProperty name="counter" property="count" param="count" />
+		<%
 
-	    out.println("Count from scriptlet code : "
-	      + counter.getCount() + "<BR>");
+		    out.println("Count from scriptlet code : "
+		      + counter.getCount() + "<BR>");
 
-	%>
+		%>
 
-	Count from jsp:getProperty :
-	  <jsp:getProperty name="counter" property="count" /><BR>
+		Count from jsp:getProperty :
+		  <jsp:getProperty name="counter" property="count" /><BR>
 
-	</BODY>
-	</HTML>
-	<body>
-	<jsp:forward page = "userinput.jsp"> 
-	<jsp:param name = "msg" value = "invalid credit card number"/> 
-	</jsp:forward> 
+		</BODY>
+		</HTML>
+		<body>
+		<jsp:forward page = "userinput.jsp"> 
+		<jsp:param name = "msg" value = "invalid credit card number"/> 
+		</jsp:forward> 
 
-	</body>
-	</html>
+		</body>
+		</html>
