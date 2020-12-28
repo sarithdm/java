@@ -62,137 +62,137 @@ need to be able to pass control from one page to another
 e.g. in the example, infovalidate.jsp need to be able to forward to either userinput.jsp or confirmed.jsp depending on validation result 
 Can use the <jsp:forward> standard action tag 
 A validation page (infovalidate.jsp) forward control to a page, userinput.jsp, in order to display an error message. Need to include error message in the forwarding instruction.
-<html>
-<head>	
-<title>User Input JSP File</title>
-</head>
-<body>
-<form action="infovalidate.jsp">
-Card Number: <input type ="text" name="cnum">
-<br/>
-CVV: <input type="text" name="cvv">
-<br/>
-<input type ="submit" value ="submit">
-</form>
-</body>
-</html><html>
-<head>	
-<title>User Input JSP File</title>
-</head>
-<body>
-<form action="infovalidate.jsp">
-Card Number: <input type ="text" name="cnum">
-<br/>
-CVV: <input type="text" name="cvv">
-<br/>
-<input type ="submit" value ="submit">
-</form>
+	<html>
+	<head>	
+	<title>User Input JSP File</title>
+	</head>
+	<body>
+	<form action="infovalidate.jsp">
+	Card Number: <input type ="text" name="cnum">
+	<br/>
+	CVV: <input type="text" name="cvv">
+	<br/>
+	<input type ="submit" value ="submit">
+	</form>
+	</body>
+	</html><html>
+	<head>	
+	<title>User Input JSP File</title>
+	</head>
+	<body>
+	<form action="infovalidate.jsp">
+	Card Number: <input type ="text" name="cnum">
+	<br/>
+	CVV: <input type="text" name="cvv">
+	<br/>
+	<input type ="submit" value ="submit">
+	</form>
 
-<%
-out.println("Message - " + request.getParameter("msg"));
-out.println("<br/>");
+	<%
+	out.println("Message - " + request.getParameter("msg"));
+	out.println("<br/>");
 
-%>
+	%>
 
-</body>
-</html>
+	</body>
+	</html>
 
-<html>
-<head>	
-<title>Information Validation JSP File</title>
-</head>
-<body>
-<jsp:forward page = "userinput.jsp"> 
-<jsp:param name = "msg" value = "invalid credit card number"/> 
-</jsp:forward> 
+	<html>
+	<head>	
+	<title>Information Validation JSP File</title>
+	</head>
+	<body>
+	<jsp:forward page = "userinput.jsp"> 
+	<jsp:param name = "msg" value = "invalid credit card number"/> 
+	</jsp:forward> 
 
-</body>
-</html>
+	</body>
+	</html>
 
 ## 5. Create a java bean ‘Student’ having attributes name, rollno, age, marks. Write a JSP page    processForm.jsp to display submitted details of students through a form.
-<form method="POST" action="processForm.jsp">
-Name:    <input name="name"/> </br>
- Username:   <input name="username"/></br>
-Job:   <input name="jobTitle"/></br>
-   City: <input name="city"/></br>
-<input type="submit">
+	<form method="POST" action="processForm.jsp">
+	Name:    <input name="name"/> </br>
+	 Username:   <input name="username"/></br>
+	Job:   <input name="jobTitle"/></br>
+	   City: <input name="city"/></br>
+	<input type="submit">
 
-<%@ page import = "com.it409.Employee"%>
-<jsp:useBean id="employee" class="com.it409.Employee">
-    <jsp:setProperty name="employee" property="*"/>
-</jsp:useBean>
-<HTML>
-<HEAD><TITLE>Hello</TITLE></HEAD>
-<BODY>
-<H1>
-Name:<jsp:getProperty name="employee" property="name" /> </br>
-Username: <jsp:getProperty name="employee" property="username" /></br>
-Job: <jsp:getProperty name="employee" property="jobTitle" /></br>
-City: <jsp:getProperty name="employee" property="city" /></br>
-<%-- name should match getName --%>
-</H1>
-</BODY>
-</HTML>
+	<%@ page import = "com.it409.Employee"%>
+	<jsp:useBean id="employee" class="com.it409.Employee">
+	    <jsp:setProperty name="employee" property="*"/>
+	</jsp:useBean>
+	<HTML>
+	<HEAD><TITLE>Hello</TITLE></HEAD>
+	<BODY>
+	<H1>
+	Name:<jsp:getProperty name="employee" property="name" /> </br>
+	Username: <jsp:getProperty name="employee" property="username" /></br>
+	Job: <jsp:getProperty name="employee" property="jobTitle" /></br>
+	City: <jsp:getProperty name="employee" property="city" /></br>
+	<%-- name should match getName --%>
+	</H1>
+	</BODY>
+	</HTML>
 
 ## 6. Explain session sharing between JSP page with an example	
 There are a number of different techniques available to web applications to enable session tracking, including cookies 
 In JSP, it can be done by simply using the ‘scope’ attribute of whatever needs to be tracked. 
 Set the ‘scope’ to session, and the relevant attribute will be available throughout the session of the client
 Example: a JSP page that displays two counters – a hit counter for the session, and a hit counter for the application
-package com.it409;
-import java.io.Serializable;
+	package com.it409;
+	import java.io.Serializable;
 
-public class Counter implements Serializable{
+	public class Counter implements Serializable{
 
-  // Initialize the bean on creation
-  int count = 0;
+	  // Initialize the bean on creation
+	  int count = 0;
 
-  // Parameterless Constructor
-  public Counter() {
+	  // Parameterless Constructor
+	  public Counter() {
 
-  }
+	  }
 
-  // Property Getter
-  public int getCount() {
+	  // Property Getter
+	  public int getCount() {
 
-    // Increment the count property, with every request
-    count++;
+	    // Increment the count property, with every request
+	    count++;
 
-    return this.count;
-  }
+	    return this.count;
+	  }
 
-  // Property Setter
-  public void setCount(int count) {
+	  // Property Setter
+	  public void setCount(int count) {
 
-    this.count = count;
-  }
-}
+	    this.count = count;
+	  }
+	}
 
-<HTML>
-<HEAD>
-</HEAD>
-<BODY>
-<%@ page language="java" %>
+	<HTML>
+	<HEAD>
+	</HEAD>
+	<BODY>
+	<%@ page language="java" %>
 
-<jsp:useBean id="counter" scope="session" class="com.it409.Counter" />
+	<jsp:useBean id="counter" scope="session" class="com.it409.Counter" />
 
-<jsp:setProperty name="counter" property="count" param="count" />
-<%
+	<jsp:setProperty name="counter" property="count" param="count" />
+	<%
 
-    out.println("Count from scriptlet code : "
-      + counter.getCount() + "<BR>");
+	    out.println("Count from scriptlet code : "
+	      + counter.getCount() + "<BR>");
 
-%>
+	%>
 
-Count from jsp:getProperty :
-  <jsp:getProperty name="counter" property="count" /><BR>
+	Count from jsp:getProperty :
+	  <jsp:getProperty name="counter" property="count" /><BR>
 
-</BODY>
-</HTML>
-<body>
-<jsp:forward page = "userinput.jsp"> 
-<jsp:param name = "msg" value = "invalid credit card number"/> 
-</jsp:forward> 
+	</BODY>
+	</HTML>
+	<body>
+	<jsp:forward page = "userinput.jsp"> 
+	<jsp:param name = "msg" value = "invalid credit card number"/> 
+	</jsp:forward> 
 
-</body>
-</html>
+	</body>
+	</html>
