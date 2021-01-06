@@ -30,6 +30,8 @@ To connect to MySQL
 Tomcat Webapps Folder
 
     /var/lib/tomcat7/
+    
+    sudo chmod 777 /var/lib/tomcat7/webapps
 
 Folder to save jar file
 
