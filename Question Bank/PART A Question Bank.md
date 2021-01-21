@@ -191,6 +191,172 @@ https://docs.oracle.com/javaee/6/tutorial/doc/bnadu.html
 * ResultSet: These objects hold data retrieved from a database
 * SQLException: This class handles any errors that occur in a database application.
 
+# 12  Design and Develop a Servlet based web application to update the basic salary of all employees belonging to the department of sales by 5%, assuming there exists an employee table with field(e_id,e_dept,e_name,b_sal,n_sal)
+    import java.io.*;
+    import java.sql.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class login extends HttpServlet {
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
+    throws ServletException, IOException {
+
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+
+    res.setContentType("text/html");
+    PrintWriter out = res.getWriter();
+
+    String e_id=req.getParameter("e_id");
+    
+    try {
+    // Load (and therefore register) the MySQL Driver
+    Class.forName("com.mysql.jdbc.Driver");
+    // Get a Connection to the database
+    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","root");
+    // Create a Statement object
+    stmt = con.createStatement();
+
+    // Execute an SQL query, get a ResultSet
+    rs = stmt.executeQuery("SELECT b_sal FROM employee where e_id='"+e_id+"'");
+
+    if(rs.next()){
+    b_sal=rs.getInt("First_Name")
+    stmt.executeQuery("update employee set b_sal=update_b_sal where e_id='"+e_id+"'");
+    }
+
+    }
+    catch(ClassNotFoundException e) {
+    out.println("Couldn't load database driver: " + e.getMessage());
+    }
+    catch(SQLException e) {
+    out.println("SQLException caught: " + e.getMessage());
+    }
+    finally {
+    // Always close the database connection.
+    try {
+    if (con != null) con.close();
+    }
+    catch (SQLException ignored) { }
+    }
+    }
+    }
+
+# 13 Design and Implement a Servlets based web application to accept username and password from the user and validate it with the values retrieved from the database?
+    import java.io.*;
+    import java.sql.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class login extends HttpServlet {
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
+    throws ServletException, IOException {
+
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+
+    res.setContentType("text/html");
+    PrintWriter out = res.getWriter();
+
+    String username=req.getParameter("username");
+    String userpass=req.getParameter("userpass");
+    try {
+    // Load (and therefore register) the MySQL Driver
+    Class.forName("com.mysql.jdbc.Driver");
+    // Get a Connection to the database
+    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","root");
+    // Create a Statement object
+    stmt = con.createStatement();
+
+    // Execute an SQL query, get a ResultSet
+    rs = stmt.executeQuery("SELECT * FROM USER where NAME='"+username+"' and PASSWORD ='"+userpass+"'");
+
+    if(rs.next()){
+                RequestDispatcher rd=req.getRequestDispatcher("dashboard");
+                rd.forward(req,res);
+            }
+            else{
+                out.print("Sorry username or password error");
+                RequestDispatcher rd=req.getRequestDispatcher("index.html");
+                rd.include(req,res);
+            }
+
+    }
+    catch(ClassNotFoundException e) {
+    out.println("Couldn't load database driver: " + e.getMessage());
+    }
+    catch(SQLException e) {
+    out.println("SQLException caught: " + e.getMessage());
+    }
+    finally {
+    // Always close the database connection.
+    try {
+    if (con != null) con.close();
+    }
+    catch (SQLException ignored) { }
+    }
+    }
+    }
+# 14 Design and Implement a Servlet based web application to help the librarian to enter the newly arrived book details (Book number, title and author) into a database for handling the library software through a suitable interface.
+    import java.io.*;
+    import java.sql.*;
+    import javax.servlet.*;
+    import javax.servlet.http.*;
+
+    public class login extends HttpServlet {
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
+    throws ServletException, IOException {
+
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+
+    res.setContentType("text/html");
+    PrintWriter out = res.getWriter();
+
+    String book_number=req.getParameter("book_number");
+    String title=req.getParameter("title");
+    String author=req.getParameter("author");
+    
+    try {
+    // Load (and therefore register) the MySQL Driver
+    Class.forName("com.mysql.jdbc.Driver");
+    // Get a Connection to the database
+    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db","root","root");
+    // Create a Statement object
+    stmt = con.createStatement();
+
+    // Execute an SQL query, get a ResultSet
+    stmt.executeQuery("INSERT INTO book_details (book_number,title,author) VALUES ('"+book_number+"','"+title+"','"+author+"')");
+
+        }
+    catch(ClassNotFoundException e) {
+    out.println("Couldn't load database driver: " + e.getMessage());
+    }
+    catch(SQLException e) {
+    out.println("SQLException caught: " + e.getMessage());
+    }
+    finally {
+    // Always close the database connection.
+    try {
+    if (con != null) con.close();
+    }
+    catch (SQLException ignored) { }
+    }
+    }
+    }
+
+
+# 15 Design and Implement a Servlet based web application to conduct online exam by fetching questions from database and submitting the same through a suitable interface.
+https://github.com/sarithdm/java/tree/master/Lab/Experiment%205/kavya
+# 16 Design and Develop a Servlet based web application for hotel booking by entering details (check in date, check out date and personal details) into a database through a suitable interface.
+https://github.com/sarithdm/java/tree/master/Lab/Experiment%206/Lithiya
+# 17 Design and Implement a Servlet based web application to purchase book through an online portal. 
+https://github.com/sarithdm/java/tree/master/Lab/Experiment%204/Lithiya
+# 18 Design and Implement an online job portal where job seekers can apply by selecting list of available jobs.
+https://github.com/sarithdm/java/tree/master/Lab
 
 
 
